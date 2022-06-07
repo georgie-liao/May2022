@@ -72,18 +72,21 @@ namespace May2022.Pages
         }
         public void EditTM(IWebDriver driver)
         {
+            Thread.Sleep(2000);
+
             // Identify last page button and click
             IWebElement goToLastPage = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[4]/a[4]/span"));
             goToLastPage.Click();
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             IWebElement findNewRecord = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[3]"));
+
             if(findNewRecord.Text == "may2022")
             {
                 // Click on edite button 
                 IWebElement editeButton = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[5]/a[1]"));
                 editeButton.Click();
-                Thread.Sleep(1000);
+                Thread.Sleep(2000);
             }
             else
             {

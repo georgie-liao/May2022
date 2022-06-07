@@ -22,5 +22,18 @@ namespace May2022.Pages
             tmButton.Click();
 
         }
+
+        public void GoToEmployeePage(IWebDriver driver)
+        {
+            // Identify Administration button and click 
+            IWebElement adminButton = driver.FindElement(By.XPath("/html/body/div[3]/div/div/ul/li[5]/a"));
+            adminButton.Click();
+
+            // Identify Time & Material button and click
+            IWebElement employeeButton = driver.FindElement(By.XPath("/html/body/div[3]/div/div/ul/li[5]/ul/li[2]/a"));
+            employeeButton.Click();
+
+
+        }
     }
 }
