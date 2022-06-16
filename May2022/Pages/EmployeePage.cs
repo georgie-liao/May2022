@@ -17,17 +17,18 @@ namespace May2022.Pages
             // Identify Create button and click 
             driver.FindElement(By.XPath("//*[@id='container']/p/a")).Click();
             WaitHelpers.WaitToBeClickable(driver, "Xpath", "//*[@id='TimeMaterialEditForm']/div/div[1]/div/span[1]/span/span[2]", 5);
-     
+            Thread.Sleep(1500);
 
             // Identify Name textbox and enter name
             IWebElement nameTextBox = driver.FindElement(By.Id("Name"));
             nameTextBox.SendKeys("Hari TestName");
-            
+            Thread.Sleep(1000);
+
 
             // Identify Username textbox and enter name
             IWebElement usernameTextBox = driver.FindElement(By.Id("Username"));
             usernameTextBox.SendKeys("usernameHari123");
-      
+            Thread.Sleep(1000);
 
             //------------------ Contact ------------------------------------
             // Identify Edit Contact button and click
